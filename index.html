@@ -812,7 +812,7 @@ function buildMenu() {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'card';
     const c = document.createElement('canvas'); drawCells(c, def.cells, def.n);
     const nm = document.createElement('span'); nm.className = 'nm'; nm.textContent = def.name;
-    const bt = document.createElement('span'); bt.className = 'bt'; bt.textContent = best[def.key] ? 'ベスト ' + best[def.key] : 'みプレイ';
+    const bt = document.createElement('span'); bt.className = 'bt'; bt.textContent = best[def.key] ? 'ベスト ' + best[def.key] : '未プレイ';
     b.append(c, nm, bt);
     b.addEventListener('click', () => { ensureAudio(); startStage(def, false); });
     g.append(b);
